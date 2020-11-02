@@ -38,6 +38,7 @@ const client = new Client();
 
 const http = require('http');
 const server = http.createServer(async (req, res) => {
+  console.log(`< ${req.method} ${req.url}`)
   let response;
   try {
     req.text = () =>
@@ -61,8 +62,11 @@ const server = http.createServer(async (req, res) => {
   }
 
   res.writeHead(response.status, response.headers).end(response.body);
+  console.log(`> ${req.method} ${req.url} ${response.status}`)
 });
-server.listen(80);
+server.listen(8080, '0.0.0.0');
+
+console.log("Terraform backend is now running!")
 
 async function handleRequest(req) {
   try {
