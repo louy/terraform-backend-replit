@@ -37,6 +37,7 @@ const Client = require('@replit/database');
 const client = new Client();
 
 const http = require('http');
+const url = require('url');
 const server = http.createServer(async (req, res) => {
   console.log(`< ${req.method} ${req.url}`)
   let response;
@@ -76,7 +77,7 @@ async function handleRequest(req) {
       if (authError) return authError;
     }
 
-    let requestURL = new URL(req.url);
+    let requestURL = url.parse(req.url);
     const path = requestURL.pathname;
     switch (true) {
       case req.method === 'GET':
