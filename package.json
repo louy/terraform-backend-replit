@@ -4,6 +4,7 @@
   "description": "A terraform backend implementation using repl.it",
   "main": "index.js",
   "scripts": {
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Louay Alakkad <louay@alakkad.me>",
