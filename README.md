@@ -36,9 +36,11 @@ Use the replit preview url as your backend url in your terraform config. Check o
 ```hcl
 terraform {
   backend "http" {
-    address = "https://terraform-backend.ACCOUNT_NAME.repl.it/"
-    username = "CHANGE ME!"
-    password = "CHANGE ME!"
+    address        = "https://terraform-backend-replit.louy.repl.run"
+    username       = "CHANGE ME!"
+    password       = "CHANGE ME!"
+    lock_address   = "https://terraform-backend-replit.louy.repl.run"
+    unlock_address = "https://terraform-backend-replit.louy.repl.run"
   }
 }
 ```
