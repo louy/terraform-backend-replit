@@ -21,6 +21,12 @@ USERNAME=changeme
 PASSWORD=changeme
 ```
 
+Personally I use the following command to generate random values each time:
+
+```
+openssl rand -hex 32
+```
+
 According to [the docs](https://docs.repl.it/repls/secret-keys) your `.env` file is private, even when you use a public repl, but you can always use a private repl if you have a paid account.
 
 Congrats! Once you've saved your changes you're good to go!
