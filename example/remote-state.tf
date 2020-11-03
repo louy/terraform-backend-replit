@@ -1,9 +1,9 @@
 terraform {
   backend "http" {
-    address        = "https://terraform-backend-replit.louy.repl.run"
+    address        = "https://terraform-backend-replit.louy.repl.co"
     username       = "CHANGE ME!"
     password       = "CHANGE ME!"
-    lock_address   = "https://terraform-backend-replit.louy.repl.run"
-    unlock_address = "https://terraform-backend-replit.louy.repl.run"
+    lock_address   = "https://terraform-backend-replit.louy.repl.co"
+    unlock_address = "https://terraform-backend-replit.louy.repl.co"
   }
 }

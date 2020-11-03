@@ -10,7 +10,7 @@ This backend supports state locks and an having arbitrary number of terraform st
 
 ## Getting started
 
-To use this as a backend, all you need is to open the public repl for this repo and fork it, then change the secret values.
+To use this as a backend, all you need is to [open the public repl](https://repl.it/@louy/terraform-backend-replit) for this repo and fork it, then change the secret values.
 
 ### Secret values
 
@@ -36,11 +36,11 @@ Use the replit preview url as your backend url in your terraform config. Check o
 ```hcl
 terraform {
   backend "http" {
-    address        = "https://terraform-backend-replit.louy.repl.run"
+    address        = "https://terraform-backend-replit.louy.repl.co"
     username       = "CHANGE ME!"
     password       = "CHANGE ME!"
-    lock_address   = "https://terraform-backend-replit.louy.repl.run"
-    unlock_address = "https://terraform-backend-replit.louy.repl.run"
+    lock_address   = "https://terraform-backend-replit.louy.repl.co"
+    unlock_address = "https://terraform-backend-replit.louy.repl.co"
   }
 }
 ```
