@@ -55,7 +55,11 @@ const server = http.createServer(async (req, res) => {
           .on('error', reject);
       });
 
-    req.headers.get = header => req.headers[header.toLowerCase()];
+    req.headers.get = header => {
+      const h = req.headers[header.toLowerCase()]
+      if (Array.isArray(h)) return h[0];
+      return h;
+    };
 
     response = await handleRequest(req);
   } catch (error) {
